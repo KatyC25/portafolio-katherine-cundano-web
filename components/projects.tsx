@@ -80,21 +80,24 @@ export default function Projects() {
 					Mi Portafolio
 				</motion.h2>
 
-				<div className="flex justify-start gap-3 mb-12 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-rose-500 scrollbar-track-transparent">
-					{filters.map((filter) => (
-						<button
-							key={filter.id}
-							type="button"
-							onClick={() => setActiveFilter(filter.id)}
-							className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all ${
-								activeFilter === filter.id
-									? "bg-linear-to-r from-rose-500 to-rose-600 text-white shadow-md"
-									: "bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700"
-							}`}
-						>
-							{filter.label}
-						</button>
-					))}
+				<div className="mb-12 pb-2 w-full">
+					<div className="flex gap-3 overflow-x-auto scrollbar-thin scrollbar-thumb-rose-500 scrollbar-track-transparent w-full px-4 justify-start md:justify-center lg:justify-center mx-auto">
+						{filters.map((filter) => (
+							<button
+								key={filter.id}
+								type="button"
+								onClick={() => setActiveFilter(filter.id)}
+								className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all ${
+									activeFilter === filter.id
+										? "bg-linear-to-r from-rose-500 to-rose-600 text-white shadow-md"
+										: "bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700"
+								}`}
+								style={{ minWidth: 100 }}
+							>
+								{filter.label}
+							</button>
+						))}
+					</div>
 				</div>
 
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
