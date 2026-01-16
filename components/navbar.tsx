@@ -2,16 +2,16 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu } from "lucide-react";
+import { X } from "lucide-react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
 export default function Navbar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-	const { theme, setTheme } = useTheme();
-	const [mounted, setMounted] = useState(false);
+	// ...existing code...
 
-	useEffect(() => setMounted(true), []);
+	// ...existing code...
 
 	const navLinks = [
 		{ name: "Inicio", href: "#home" },

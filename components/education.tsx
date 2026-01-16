@@ -42,7 +42,7 @@ export default function Education() {
 								transition={{ duration: 0.5 }}
 								viewport={{ once: true, amount: 0.2 }}
 							>
-								<div className="flex-shrink-0">
+								<div className="shrink-0">
 									<GraduationCap
 										className={`w-10 h-10 ${
 											isCurrent ? "text-rose-400" : "text-purple-400"
@@ -69,7 +69,7 @@ export default function Education() {
 				</div>
 
 				<motion.div
-					className="bg-gradient-to-br from-rose-50 dark:from-rose-900/20 to-purple-50 dark:to-purple-900/20 rounded-2xl p-8 md:p-12 border border-slate-200 dark:border-slate-700"
+					className="bg-linear-to-br from-rose-50 dark:from-rose-900/20 to-purple-50 dark:to-purple-900/20 rounded-2xl p-8 md:p-12 border border-slate-200 dark:border-slate-700"
 					initial={{ opacity: 0, y: 40 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.2 }}
@@ -89,7 +89,7 @@ export default function Education() {
 								transition={{ duration: 0.5 }}
 								viewport={{ once: true, amount: 0.2 }}
 							>
-								<div className="w-2 h-2 rounded-full bg-rose-500 mt-2.5 flex-shrink-0 shadow-lg shadow-rose-500/50" />
+								<div className="w-2 h-2 rounded-full bg-rose-500 mt-2.5 shrink-0 shadow-lg shadow-rose-500/50" />
 								<p className="text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
 									{cert}
 								</p>

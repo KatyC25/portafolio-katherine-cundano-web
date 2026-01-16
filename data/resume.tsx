@@ -1,14 +1,4 @@
-import {
-	Github,
-	Linkedin,
-	Home,
-	Book,
-	Briefcase,
-	GraduationCap,
-	Code,
-	Smartphone,
-	Terminal,
-} from "lucide-react";
+import { Github } from "lucide-react";
 
 export const DATA = {
 	name: "Katherine Cundano",

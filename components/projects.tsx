@@ -6,10 +6,21 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+type Project = {
+	title: string;
+	href: string;
+	dates: string;
+	active: boolean;
+	description: string;
+	technologies: readonly string[];
+	links: readonly { type: string; href: string; icon?: React.ElementType }[];
+	image: string;
+};
+
 export default function Projects() {
 	const [activeFilter, setActiveFilter] = useState("all");
 
-	const enhancedProjects = DATA.projects.map((project) => {
+	const enhancedProjects = (DATA.projects as readonly Project[]).map((project) => {
 		let category = "web";
 		let status: string | undefined = "Completado";
 
@@ -19,9 +30,9 @@ export default function Projects() {
 			project.title.includes("NicaMarket")
 		) {
 			category = "hackathons";
-		} else if (project.technologies.includes("React Native")) {
+		} else if (Array.isArray(project.technologies) && project.technologies.includes("React Native")) {
 			category = "mobile";
-		} else if (project.technologies.includes("PostgreSQL")) {
+		} else if (Array.isArray(project.technologies) && project.technologies.includes("PostgreSQL")) {
 			category = "fullstack";
 		}
 
@@ -69,7 +80,7 @@ export default function Projects() {
 							onClick={() => setActiveFilter(filter.id)}
 							className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all ${
 								activeFilter === filter.id
-									? "bg-gradient-to-r from-rose-500 to-rose-600 text-white shadow-md"
+									? "bg-linear-to-r from-rose-500 to-rose-600 text-white shadow-md"
 									: "bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700"
 							}`}
 						>
@@ -88,14 +99,14 @@ export default function Projects() {
 							transition={{ duration: 0.5, delay: idx * 0.1 }}
 							viewport={{ once: true, amount: 0.2 }}
 						>
-							<div className="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center overflow-hidden relative">
-								<div className="absolute inset-0 bg-gradient-to-br from-rose-500/20 via-purple-500/20 to-slate-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+							<div className="h-48 bg-linear-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center overflow-hidden relative">
+								<div className="absolute inset-0 bg-linear-to-br from-rose-500/20 via-purple-500/20 to-slate-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 								<p className="text-slate-400 dark:text-slate-500 text-center font-medium">
 									Project Preview
 								</p>
 							</div>
 
-							<div className="p-6 flex flex-col flex-grow">
+							<div className="p-6 flex flex-col grow">
 								<div className="flex items-start justify-between mb-2">
 									<h3 className="text-xl font-bold text-slate-800 dark:text-white">
 										{project.title}
@@ -125,7 +136,7 @@ export default function Projects() {
 									</span>
 								)}
 
-								<p className="text-slate-600 dark:text-slate-400 mb-4 text-sm flex-grow line-clamp-3">
+								<p className="text-slate-600 dark:text-slate-400 mb-4 text-sm grow line-clamp-3">
 									{project.description}
 								</p>
 

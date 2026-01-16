@@ -93,7 +93,7 @@ export default function Contact() {
 									id="message"
 									name="message"
 									placeholder="Cuéntame sobre tu proyecto..."
-									className="min-h-[150px] bg-slate-50 border-slate-200 resize-none"
+									className="min-h-37.5 bg-slate-50 border-slate-200 resize-none"
 									required
 								/>
 								<ValidationError

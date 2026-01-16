@@ -36,7 +36,7 @@ export default function SkillsSummary() {
 										<Wrench className="w-6 h-6 text-emerald-500" />
 									)}
 									{group.label.includes("Habilidades Blandas") && (
-										<span className="inline-block w-6 h-6 rounded-full bg-gradient-to-tr from-rose-400 to-purple-400 flex items-center justify-center text-white font-bold">
+										<span className="w-6 h-6 rounded-full bg-linear-to-tr from-rose-400 to-purple-400 flex items-center justify-center text-white font-bold">
 											😊
 										</span>
 									)}
@@ -45,7 +45,7 @@ export default function SkillsSummary() {
 									</h4>
 								</div>
 								<div className="flex flex-wrap gap-2">
-									{group.details.split(",").map((item, i) => (
+									{group.details.split(",").map((item) => (
 										<span
 											key={item.trim()}
 											className={`px-3 py-1 rounded-full text-sm font-medium ${
