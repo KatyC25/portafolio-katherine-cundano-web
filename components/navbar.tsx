@@ -98,7 +98,7 @@ export default function Navbar() {
 								if (link.href === "#contact") {
 									return (
 										<button
-                                            type="button"
+											type="button"
 											key={link.name}
 											className="text-slate-600 dark:text-slate-300 hover:text-rose-600 dark:hover:text-rose-400 font-medium px-2 py-1 text-left"
 											onClick={() => {

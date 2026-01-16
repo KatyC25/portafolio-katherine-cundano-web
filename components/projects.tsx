@@ -20,28 +20,36 @@ type Project = {
 export default function Projects() {
 	const [activeFilter, setActiveFilter] = useState("all");
 
-	const enhancedProjects = (DATA.projects as readonly Project[]).map((project) => {
-		let category = "web";
-		let status: string | undefined = "Completado";
+	const enhancedProjects = (DATA.projects as readonly Project[]).map(
+		(project) => {
+			let category = "web";
+			let status: string | undefined = "Completado";
 
-		if (
-			project.title.includes("Hackathon") ||
-			project.title.includes("Dealsify") ||
-			project.title.includes("NicaMarket")
-		) {
-			category = "hackathons";
-		} else if (Array.isArray(project.technologies) && project.technologies.includes("React Native")) {
-			category = "mobile";
-		} else if (Array.isArray(project.technologies) && project.technologies.includes("PostgreSQL")) {
-			category = "fullstack";
-		}
+			if (
+				project.title.includes("Hackathon") ||
+				project.title.includes("Dealsify") ||
+				project.title.includes("NicaMarket")
+			) {
+				category = "hackathons";
+			} else if (
+				Array.isArray(project.technologies) &&
+				project.technologies.includes("React Native")
+			) {
+				category = "mobile";
+			} else if (
+				Array.isArray(project.technologies) &&
+				project.technologies.includes("PostgreSQL")
+			) {
+				category = "fullstack";
+			}
 
-		if (project.active || project.title.includes("Dealsify")) {
-			status = undefined;
-		}
+			if (project.active || project.title.includes("Dealsify")) {
+				status = undefined;
+			}
 
-		return { ...project, category, status };
-	});
+			return { ...project, category, status };
+		},
+	);
 
 	const filteredProjects =
 		activeFilter === "all"
