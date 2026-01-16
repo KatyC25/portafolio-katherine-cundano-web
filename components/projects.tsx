@@ -80,7 +80,7 @@ export default function Projects() {
 					Mi Portafolio
 				</motion.h2>
 
-				<div className="flex justify-center gap-3 mb-12 overflow-x-auto pb-2">
+				<div className="flex justify-start gap-3 mb-12 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-rose-500 scrollbar-track-transparent">
 					{filters.map((filter) => (
 						<button
 							key={filter.id}

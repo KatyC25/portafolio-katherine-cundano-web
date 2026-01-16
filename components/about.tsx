@@ -25,7 +25,7 @@ export default function About() {
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.5 }}
 						viewport={{ once: true }}
-						className="relative order-2 lg:order-1"
+						className="relative order-1"
 					>
 						<div>
 							<h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -35,39 +35,6 @@ export default function About() {
 								{DATA.summary}
 							</p>
 						</div>
-					</motion.div>
-
-					<motion.div
-						initial={{ opacity: 0, x: 50 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.5 }}
-						viewport={{ once: true }}
-						className="space-y-8 order-1 lg:order-2"
-					>
-						<div className="space-y-6">
-							{skills.map((skill) => (
-								<div key={skill.name} className="space-y-2">
-									<div className="flex justify-between items-center">
-										<span className="font-semibold text-sm md:text-base">
-											{skill.name}
-										</span>
-										<span className="text-muted-foreground text-sm">
-											{skill.level}%
-										</span>
-									</div>
-
-									<div className="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2.5 overflow-hidden">
-										<motion.div
-											initial={{ width: 0 }}
-											whileInView={{ width: `${skill.level}%` }}
-											transition={{ duration: 1 }}
-											className={`h-full rounded-full ${skill.color}`}
-										/>
-									</div>
-								</div>
-							))}
-						</div>
-
 						<div className="flex flex-wrap items-center gap-4 pt-4">
 							<a
 								href="/Katherine_Del_Carmen_Cundano_Morales_CV.pdf"
@@ -80,11 +47,41 @@ export default function About() {
 									Descargar CV
 								</Button>
 							</a>
-
 							<div className="flex items-center text-muted-foreground">
 								<MapPin className="w-4 h-4 mr-1 text-rose-500" />
 								{DATA.location}
 							</div>
+						</div>
+					</motion.div>
+
+					<motion.div
+						initial={{ opacity: 0, x: 50 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ duration: 0.5 }}
+						viewport={{ once: true }}
+						className="space-y-8 order-2"
+					>
+						<div className="space-y-6">
+							{skills.map((skill) => (
+								<div key={skill.name} className="space-y-2">
+									<div className="flex justify-between items-center">
+										<span className="font-semibold text-sm md:text-base">
+											{skill.name}
+										</span>
+										<span className="text-muted-foreground text-sm">
+											{skill.level}%
+										</span>
+									</div>
+									<div className="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2.5 overflow-hidden">
+										<motion.div
+											initial={{ width: 0 }}
+											whileInView={{ width: `${skill.level}%` }}
+											transition={{ duration: 1 }}
+											className={`h-full rounded-full ${skill.color}`}
+										/>
+									</div>
+								</div>
+							))}
 						</div>
 					</motion.div>
 				</div>
