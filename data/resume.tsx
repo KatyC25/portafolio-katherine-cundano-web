@@ -17,22 +17,33 @@ export const DATA = {
 	location: "Juigalpa, Chontales",
 	locationLink: "https://www.google.com/maps/place/Juigalpa",
 	description:
-		"Desarrolladora Web Frontend egresada de Ingeniería de Sistemas. Especialista en React, Next.js y TypeScript. Creo soluciones escalables y experiencias de usuario excepcionales.",
+		"Me especializo en la creación de soluciones escalables, abarcando sistemas de gestión financiera y aplicaciones web modernas de alto impacto.",
 	summary:
-		"Desarrolladora Frontend con sólida experiencia en React y el ecosistema de Next.js. Me apasiona transformar diseños complejos en código limpio y eficiente. He liderado el desarrollo frontend en proyectos como 'Avatar CRM' y startups en Hackathons, enfocándome siempre en la calidad del código, la experiencia de usuario (UX) y el trabajo en equipo ágil.",
+		"Desarrolladora Frontend con experiencia en la construcción de aplicaciones web modernas y escalables utilizando React y Next.js. Especializada en convertir requerimientos y diseños complejos en interfaces eficientes, accesibles y orientadas a la experiencia de usuario. He participado y liderado el desarrollo frontend en proyectos académicos, startups y hackathons, trabajando bajo metodologías ágiles y priorizando la calidad del código.",
 	avatarUrl: "/me.png",
 	skills: [
-		"React",
-		"Next.js",
-		"TypeScript",
-		"Tailwind CSS",
-		"Prisma",
-		"PostgreSQL",
-		"React Native",
-		"Node.js",
-		"Redux Toolkit",
-		"Git",
-		"Framer Motion",
+		{
+			label: "Lenguajes",
+			details: "TypeScript, JavaScript, Python, SQL, HTML5, CSS3.",
+		},
+		{
+			label: "Frameworks & Libs",
+			details:
+				"Next.js, React, React Native, Tamagui, shadcn/ui, Prisma, Tailwind CSS.",
+		},
+		{
+			label: "Herramientas",
+			details: "Git, GitHub, Jira, Postman, VS Code, Redux Toolkit, Trello.",
+		},
+		{
+			label: "Bases de Datos",
+			details: "PostgreSQL, Microsoft SQL Server.",
+		},
+		{
+			label: "Habilidades Blandas",
+			details:
+				"Trabajo en equipo, Comunicación asertiva, Resolución de problemas, Adaptabilidad.",
+		},
 	],
 	contact: {
 		email: "",
@@ -135,13 +146,18 @@ export const DATA = {
 		},
 		{
 			title: "Sistema CRM Avatar",
-			href: "#",
+			href: "https://www.avatar-crm.com/",
 			dates: "2024",
 			active: true,
 			description:
-				"Dashboard completo para gestión de clientes con React y TypeScript.",
+				"CRM moderno para gestión de clientes, ventas y reportes, con automatización y herramientas inteligentes para clínicas y empresas.",
 			technologies: ["React", "TypeScript", "Tailwind CSS"],
-			links: [],
+			links: [
+				{
+					type: "Demo",
+					href: "https://www.avatar-crm.com/",
+				},
+			],
 			image: "",
 		},
 	],
