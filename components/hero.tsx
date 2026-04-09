@@ -39,7 +39,7 @@ export default function Hero() {
 								Desarrolladora
 								<br />
 								<span className="bg-linear-to-r from-rose-600 to-purple-600 bg-clip-text text-transparent">
-									Frontend
+									Full Stack
 								</span>
 							</h1>
 							<p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed max-w-lg">
@@ -49,15 +49,15 @@ export default function Hero() {
 
 						<div className="flex items-center space-x-2">
 							<div className="flex space-x-1">
-								{[...Array(5)].map((_, i) => (
+								{["s1", "s2", "s3", "s4", "s5"].map((starId) => (
 									<Star
-										key={i}
+										key={starId}
 										className="w-5 h-5 fill-yellow-400 text-yellow-400"
 									/>
 								))}
 							</div>
 							<span className="text-slate-600 dark:text-slate-400 font-medium text-sm">
-								+1 año de experiencia
+								Experiencia en frontend y backend
 							</span>
 						</div>
 
@@ -115,10 +115,13 @@ export default function Hero() {
 							<div className="absolute inset-0 bg-linear-to-br from-rose-500 via-purple-500 to-blue-500 rounded-full animate-pulse opacity-20 blur-2xl"></div>
 
 							<div className="absolute inset-4 rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center z-10">
-								<img
+								<Image
 									src="/fotoPerfil.jpeg"
 									alt="Katherine"
+									width={512}
+									height={512}
 									className="w-full h-full object-cover object-center"
+									priority
 								/>
 							</div>
 

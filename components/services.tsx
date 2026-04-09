@@ -1,6 +1,6 @@
 "use client";
 import { Code, Database, Wrench, Users } from "lucide-react";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export default function Services() {
 	const colorMap = {
@@ -20,23 +20,23 @@ export default function Services() {
 	}[] = [
 		{
 			icon: <Code className="w-8 h-8" />,
-			title: "Desarrollo Web Frontend",
+			title: "Desarrollo Frontend",
 			description:
-				"Interfaces web modernas y responsivas construidas con React, Next.js y TypeScript.",
+				"Interfaces web modernas, rápidas y responsivas con React, Next.js y TypeScript.",
 			color: "rose",
 		},
 		{
 			icon: <Database className="w-8 h-8" />,
-			title: "Integración de APIs",
+			title: "APIs y Base de Datos",
 			description:
-				"Conexión eficiente con servicios backend y consumo de APIs REST con Redux Toolkit.",
+				"Construcción e integración de APIs REST y modelado de datos con PostgreSQL y Prisma.",
 			color: "purple",
 		},
 		{
 			icon: <Wrench className="w-8 h-8" />,
-			title: "Aplicaciones Móviles",
+			title: "Arquitectura Full Stack",
 			description:
-				"Desarrollo de apps nativas para iOS y Android utilizando React Native.",
+				"Implementación de soluciones end-to-end con Next.js App Router, validaciones y despliegue serverless.",
 			color: "blue",
 		},
 		{

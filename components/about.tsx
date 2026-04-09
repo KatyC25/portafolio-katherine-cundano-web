@@ -3,14 +3,14 @@
 import { DATA } from "@/data/resume";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Download, MapPin } from "lucide-react";
+import { Download } from "lucide-react";
 
 export default function About() {
 	const skills = [
-		{ name: "React & TypeScript", level: 90, color: "bg-rose-500" },
-		{ name: "Frontend Development", level: 85, color: "bg-purple-500" },
-		{ name: "UI/UX Implementation", level: 80, color: "bg-blue-500" },
-		{ name: "Mobile Development", level: 75, color: "bg-emerald-500" },
+		{ name: "React, Next.js y TypeScript", level: 90, color: "bg-rose-500" },
+		{ name: "APIs REST y lógica backend", level: 82, color: "bg-purple-500" },
+		{ name: "PostgreSQL y Prisma", level: 80, color: "bg-blue-500" },
+		{ name: "UI moderna y UX", level: 85, color: "bg-emerald-500" },
 	];
 
 	return (
@@ -47,10 +47,6 @@ export default function About() {
 									Descargar CV
 								</Button>
 							</a>
-							<div className="flex items-center text-muted-foreground">
-								<MapPin className="w-4 h-4 mr-1 text-rose-500" />
-								{DATA.location}
-							</div>
 						</div>
 					</motion.div>
 

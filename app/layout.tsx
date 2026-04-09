@@ -8,7 +8,7 @@ const font = Source_Sans_3({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Katherine Cundano | Portafolio",
-	description: "Desarrolladora Web Frontend",
+	description: "Desarrolladora Full Stack",
 };
 
 export default function RootLayout({

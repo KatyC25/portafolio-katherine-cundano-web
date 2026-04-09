@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Github, Linkedin, Mail, Send, CheckCircle } from "lucide-react";
+import { Github, Linkedin, Send, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { DATA } from "@/data/resume";
 import { useForm, ValidationError } from "@formspree/react";
@@ -133,15 +133,6 @@ export default function Contact() {
 								<Linkedin className="w-6 h-6" />
 							</Button>
 						</Link>
-						<a href={`mailto:${DATA.contact.email}`}>
-							<Button
-								variant="ghost"
-								size="icon"
-								className="hover:bg-blue-50 hover:text-blue-600"
-							>
-								<Mail className="w-6 h-6" />
-							</Button>
-						</a>
 					</div>
 				</div>
 			</div>

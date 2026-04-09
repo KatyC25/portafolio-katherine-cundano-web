@@ -6,12 +6,13 @@ import { motion } from "framer-motion";
 
 export default function Education() {
 	const certifications = [
-		"PCAP: Programming Essentials in Python - Cisco (2026)",
-		"JSE: Programming Essentials in JavaScript - Cisco (2026)",
-		"Excel Financiero - INATEC (2025)",
-		"Excel Avanzado - INATEC (2023)",
-		"Desarrollo de Proyectos Tecnológicos - CI Nicaragua (2023)",
+		"JSE: Programming Essentials in JavaScript (2026)",
+		"PCAP: Programming Essentials in Python (2026)",
+		"Excel Financiero (2025)",
+		"Desarrollo de Proyectos Tecnológicos con Marcos de Trabajo (2024)",
+		"Excel Avanzado (2023)",
 		"Programa Red Mente en Acción - Mujeres en STEM (2021)",
+		"Innovación y Trabajo bajo Presión - Hackathon Nic. (2025)",
 	];
 
 	return (
@@ -79,11 +80,11 @@ export default function Education() {
 						Certificaciones y Cursos
 					</h3>
 
-					<div className="grid md:grid-cols-2 gap-6">
+					<div className="columns-1 md:columns-2 md:gap-8">
 						{certifications.map((cert) => (
 							<motion.div
 								key={cert}
-								className="flex items-start gap-3"
+								className="mb-6 break-inside-avoid flex items-start gap-3"
 								initial={{ opacity: 0, x: 40 }}
 								whileInView={{ opacity: 1, x: 0 }}
 								transition={{ duration: 0.5 }}

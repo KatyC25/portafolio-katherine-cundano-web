@@ -3,8 +3,8 @@ export default function Footer() {
 		<footer className="py-8 text-center bg-slate-950 text-slate-400 text-sm">
 			<div className="container px-4">
 				<p>
-					© {new Date().getFullYear()} Katherine Cundano. Desarrolladora Web
-					Frontend.
+					© {new Date().getFullYear()} Katherine Cundano. Desarrolladora Full
+					Stack.
 				</p>
 			</div>
 		</footer>

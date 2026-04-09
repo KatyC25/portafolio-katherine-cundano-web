@@ -4,12 +4,12 @@ export const DATA = {
 	name: "Katherine Cundano",
 	initials: "KC",
 	url: "https://github.com/KatyC25",
-	location: "Juigalpa, Chontales",
-	locationLink: "https://www.google.com/maps/place/Juigalpa",
+	location: "Managua, Nicaragua",
+	locationLink: "https://www.google.com/maps/place/Managua",
 	description:
-		"Me especializo en la creación de soluciones escalables, abarcando sistemas de gestión financiera y aplicaciones web modernas de alto impacto.",
+		"Desarrolladora Full Stack Junior egresada de Ingeniería en Sistemas, enfocada en construir aplicaciones web modernas, escalables y eficientes.",
 	summary:
-		"Desarrolladora Frontend con experiencia en la construcción de aplicaciones web modernas y escalables utilizando React y Next.js. Especializada en convertir requerimientos y diseños complejos en interfaces eficientes, accesibles y orientadas a la experiencia de usuario. He participado y liderado el desarrollo frontend en proyectos académicos, startups y hackathons, trabajando bajo metodologías ágiles y priorizando la calidad del código.",
+		"Desarrolladora Full Stack Junior egresada de Ingeniería en Sistemas, con experiencia en desarrollo de aplicaciones web modernas utilizando React, Next.js y TypeScript, así como en la construcción de APIs y manejo de bases de datos con PostgreSQL y Prisma. He desarrollado soluciones completas que integran frontend y backend, enfocadas en escalabilidad y eficiencia. Destaco por mi aprendizaje autónomo, pensamiento analítico y trabajo en equipos ágiles.",
 	avatarUrl: "/me.png",
 	skills: [
 		{
@@ -23,11 +23,12 @@ export const DATA = {
 		},
 		{
 			label: "Herramientas",
-			details: "Git, GitHub, Jira, Postman, VS Code, Redux Toolkit, Trello.",
+			details:
+				"Git, GitHub, Jira, Postman, VS Code, Trello, Vercel, Cloudflare.",
 		},
 		{
 			label: "Bases de Datos",
-			details: "PostgreSQL, Microsoft SQL Server.",
+			details: "PostgreSQL, SQL Server.",
 		},
 		{
 			label: "Habilidades Blandas",
@@ -36,8 +37,8 @@ export const DATA = {
 		},
 	],
 	contact: {
-		email: "",
-		tel: "",
+		email: "cundanok9@gmail.com",
+		tel: "+505 8821 4091",
 		social: {
 			GitHub: {
 				name: "GitHub",
@@ -47,6 +48,10 @@ export const DATA = {
 			LinkedIn: {
 				name: "LinkedIn",
 				url: "https://www.linkedin.com/in/katherine-cundano-1b1b62377",
+			},
+			Portafolio: {
+				name: "Portafolio",
+				url: "https://portafoliokatherine.netlify.app/",
 			},
 		},
 	},
@@ -59,9 +64,9 @@ export const DATA = {
 			title: "Desarrolladora Web Frontend",
 			logoUrl: "",
 			start: "Ene 2024",
-			end: "Jun 2025",
+			end: "Jul 2025",
 			description:
-				"Desarrollo de interfaces web (React) y móviles (React Native) con TypeScript. Implementación de Redux Toolkit Query para gestión de estado y consumo de APIs REST. Participación activa en escuadrones ágiles (Scrum).",
+				"Desarrollo de interfaces web en React y móviles en React Native con TypeScript. Consumo e integración de APIs REST para gestión de datos. Manejo de estado global con Redux Toolkit Query y colaboración en entorno ágil Scrum, participando en definición de requerimientos y pruebas.",
 		},
 	],
 	education: [
@@ -78,11 +83,41 @@ export const DATA = {
 			href: "https://www.tecnacional.edu.ni",
 			degree: "Técnico General en Computación",
 			logoUrl: "",
-			start: "2019",
+			start: "2020",
 			end: "2020",
 		},
 	],
 	projects: [
+		{
+			title: "Kachiing - Plataforma SaaS para comercios",
+			href: "https://kachiing.app/",
+			dates: "2026",
+			active: true,
+			description:
+				"Desarrollo full stack de plataforma SaaS con POS, inventario y tienda online. Arquitectura con Next.js App Router, APIs internas y PostgreSQL con Prisma/Kysely, autenticación y despliegue serverless en Cloudflare.",
+			technologies: [
+				"Next.js",
+				"React",
+				"TypeScript",
+				"PostgreSQL",
+				"Prisma",
+				"Kysely",
+				"TailwindCSS",
+				"shadcn/ui",
+			],
+			links: [
+				{
+					type: "Demo",
+					href: "https://kachiing.app/",
+				},
+				{
+					type: "Source",
+					href: "https://github.com/KatyC25",
+					icon: Github,
+				},
+			],
+			image: "",
+		},
 		{
 			title: "Tienda Isela",
 			href: "https://github.com/KatyC25/tienda-isela",
