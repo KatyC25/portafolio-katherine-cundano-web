@@ -134,6 +134,10 @@ export const DATA = {
 			],
 			links: [
 				{
+					type: "Demo",
+					href: "https://tienda-isela.vercel.app/login",
+				},
+				{
 					type: "Source",
 					href: "https://github.com/KatyC25/tienda-isela",
 					icon: Github,
